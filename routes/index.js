@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/', function (req, res, next) {
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   console.log(ip);
-  res.render('index', { title: 'Express', ip: ip });
+  res.render('index', { title: 'findip', ip: ip });
 });
 
 module.exports = router;
