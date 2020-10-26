@@ -1,6 +1,12 @@
-# findip-nodejs
+# open-port-check-web
 
-- https://www.findip.kr/ 을 따라만들기
+- https://www.yougetsignal.com/tools/open-ports/ 을 따라만들기
+
+## 기능
+
+- 접속자의 공인아이피 알려줌
+- 포트포워딩 테스트
+- common ports 목록
 
 ## express generator로 프로젝트 생성
 
