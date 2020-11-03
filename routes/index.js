@@ -31,7 +31,7 @@ const common_ports_list = [
 router.get('/', function (req, res, next) {
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   res.render('index', {
-    title: 'findip',
+    title: 'Port Forwarding Tester',
     ip: ip,
     common_ports_list: common_ports_list,
   });
