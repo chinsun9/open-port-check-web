@@ -1,6 +1,10 @@
 # open-port-check-web
 
-- https://www.yougetsignal.com/tools/open-ports/ 을 따라만들기
+- https://www.yougetsignal.com/tools/open-ports/ 을 따라만들기, 클론 코딩
+
+## 데모
+
+[![시연영상](https://img.youtube.com/vi/4IMSpyKuhL4/0.jpg)](https://www.youtube.com/watch?v=4IMSpyKuhL4)
 
 ## 기능
 
