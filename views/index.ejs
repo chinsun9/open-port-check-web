@@ -4,14 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
 
     <link
       rel="icon"
       href="https://chinsun9.github.io/img/favicon20200926.ico?"
     />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/442fa0184e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script defer src="/javascripts/fetch.js"></script>
+    <script defer src="/javascripts/main.js"></script>
   </head>
   <body>
-    <h1>내 아이피 주소(IP Address): <%= ip %></h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <h2>Port Forwarding Tester</h2>
+          <p>your external address : <span><%= ip %> </span></p>
+          <form name="myForm">
+            <div class="input-group">
+              <input
+                name="ip"
+                class="form-control"
+                type="text"
+                value="<%= ip %>"
+                required
+              />
+              <input
+                name="port"
+                class="form-control"
+                type="number"
+                value="80"
+                min="0"
+                max="65535"
+                required
+              />
+              <div class="input-group-append">
+                <button
+                  type="button"
+                  class="btn btn-dark"
+                  onclick="portCheck()"
+                >
+                  Check
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="result">...</div>
+        </div>
+        <div class="col-4">
+          <h3>common ports</h3>
+          <ul>
+            <% for (const item of common_ports_list) { %>
+            <li>
+              <a href="javascript:void(0)" onclick="commonPortCheck(this)">
+                <%= item[0] %>
+              </a>
+              <%= item[1] %>
+            </li>
+            <% } %>
+            <li>
+              <button class="btn btn-light" onclick="commonPortCheckAll()">
+                Scan All Common Ports
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
