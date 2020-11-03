@@ -7,6 +7,7 @@
 - 접속자의 공인아이피 알려줌
 - 포트포워딩 테스트
 - common ports 목록
+- 모든 common port 테스트
 
 ## express generator로 프로젝트 생성
 
