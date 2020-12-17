@@ -42,8 +42,8 @@ result = await isPortReachable(port, { host: ip });
 ```
 
 - is-port-reachable 패키지를 사용해 포트 오픈 여부를 알아온다
-- 당연한 말이지만 해당 포트를 리슨하는 서버가 존재해야한다
-- host는 domain을 적어도되고, ip로 적어도 된다.
+- 당연한 말이지만 해당 포트를 리슨 하는 서버가 존재해야 한다
+- host는 domain을 적어도 되고, ip로 적어도 된다.
 
 ## check all common ports
 
@@ -102,6 +102,6 @@ router.get('/checkAll', async function (req, res) {
 });
 ```
 
-- req로 부터 ip를 가져오고,
+- req로부터 ip를 가져오고,
 - common_ports_list의 port를 가져와서 프로미스를 생성한다
-- `await Promise.all(reqPromiseArray)`로 요청을 병렬처리하였다
+- `await Promise.all(reqPromiseArray)`로 요청을 병렬 처리하였다
